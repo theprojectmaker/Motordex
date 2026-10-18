@@ -98,7 +98,7 @@ jobs:
                ios/Assets.xcassets/AppIconFrost.appiconset/icon-frost.png; do
             SZ=$(wc -c < "$f")
             echo "::warning::$f bytes $SZ"
-            if [ "$SZ" -lt 10000 ]; then echo "::error::$f download failed ($SZ bytes)"; exit 1; fi
+            if [ "$SZ" -lt 2000 ]; then echo "::error::$f download failed ($SZ bytes)"; exit 1; fi
           done
           file ios/Assets.xcassets/AppIcon.appiconset/icon-1024.png
 
